@@ -17,7 +17,7 @@ const PROFILE = {
   title: '全栈开发工程师',
   subtitle: 'AI工具高效应用者',
   email: 'shenqingyi16@gmail.com',
-  phone: '199-9332-6696',
+  phone: '199-****-6696',
   location: '重庆',
   github: 'https://github.com/qingyi232',
   avatar: '🌿', // 可以换成图片URL

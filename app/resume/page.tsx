@@ -9,7 +9,7 @@ import {
 const INFO = {
   name: '沈松熠',
   title: '全栈开发工程师',
-  phone: '199-9332-6696',
+  phone: '199-****-6696',
   email: 'shenqingyi16@gmail.com',
   location: '重庆',
   github: 'github.com/qingyi232',
