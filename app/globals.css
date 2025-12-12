@@ -1,0 +1,174 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --moss-primary: #638f50;
+  --leaf-primary: #529452;
+  --earth-primary: #ad8965;
+  --sky-primary: #4a95be;
+  --cream-bg: #fcf9f3;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: linear-gradient(135deg, #fcf9f3 0%, #f6f9f4 50%, #f5f9fc 100%);
+  min-height: 100vh;
+  transition: background 0.3s ease;
+}
+
+/* 暗色模式 */
+.dark body {
+  background: linear-gradient(135deg, #1a2e1a 0%, #1e2d1e 50%, #1a2a2a 100%);
+}
+
+.dark .card-natural {
+  background: rgba(30, 45, 30, 0.8);
+  border-color: rgba(99, 143, 80, 0.2);
+}
+
+.dark .text-natural {
+  color: #e8f0e4;
+  text-shadow: none;
+}
+
+.dark .bg-cream-50,
+.dark .bg-cream-100 {
+  background: #1e2d1e;
+}
+
+.dark .bg-white {
+  background: #243324;
+}
+
+.dark .text-moss-800 {
+  color: #d1e2c9;
+}
+
+.dark .text-moss-700 {
+  color: #aecba0;
+}
+
+.dark .text-moss-600 {
+  color: #85ad72;
+}
+
+.dark .text-moss-500 {
+  color: #638f50;
+}
+
+.dark .border-moss-100 {
+  border-color: rgba(99, 143, 80, 0.2);
+}
+
+.dark .bg-moss-50 {
+  background: rgba(99, 143, 80, 0.1);
+}
+
+.dark .bg-moss-100 {
+  background: rgba(99, 143, 80, 0.15);
+}
+
+.dark .bg-leaf-50,
+.dark .bg-leaf-100 {
+  background: rgba(82, 148, 82, 0.15);
+}
+
+.dark .bg-earth-50,
+.dark .bg-earth-100 {
+  background: rgba(173, 137, 101, 0.15);
+}
+
+.dark .bg-sky-50,
+.dark .bg-sky-100 {
+  background: rgba(74, 149, 190, 0.15);
+}
+
+/* 微噪点纹理叠加 */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  z-index: 1;
+}
+
+/* 有机曲线装饰 */
+.organic-blob {
+  border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%;
+  animation: morph 8s ease-in-out infinite;
+}
+
+@keyframes morph {
+  0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+  50% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+}
+
+/* 光线移动效果 */
+.light-hover {
+  transition: all 180ms ease-out;
+}
+
+.light-hover:hover {
+  filter: brightness(1.05);
+  transform: translateY(-2px);
+}
+
+.light-hover:active {
+  transform: translateY(1px);
+  filter: brightness(0.98);
+}
+
+/* 叶脉纹理 */
+.leaf-texture {
+  background-image: 
+    linear-gradient(135deg, transparent 40%, rgba(99, 143, 80, 0.03) 40%, rgba(99, 143, 80, 0.03) 60%, transparent 60%),
+    linear-gradient(45deg, transparent 40%, rgba(99, 143, 80, 0.02) 40%, rgba(99, 143, 80, 0.02) 60%, transparent 60%);
+  background-size: 20px 20px;
+}
+
+/* 柔和阴影卡片 */
+.card-natural {
+  background: rgba(255, 255, 255, 0.7);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(99, 143, 80, 0.1);
+  box-shadow: 0 4px 20px -5px rgba(99, 143, 80, 0.1);
+  transition: all 200ms ease-out;
+}
+
+.card-natural:hover {
+  box-shadow: 0 8px 30px -5px rgba(99, 143, 80, 0.15);
+  border-color: rgba(99, 143, 80, 0.2);
+}
+
+/* 文字高对比 */
+.text-natural {
+  color: #2c3e25;
+  text-shadow: 0 1px 2px rgba(255, 255, 255, 0.8);
+}
+
+/* 滚动条美化 */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f6f9f4;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #aecba0;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #85ad72;
+}
