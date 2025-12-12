@@ -2,7 +2,7 @@
 
 import { 
   Mail, Phone, MapPin, Github, Calendar, Award, Briefcase, 
-  GraduationCap, Code2, Sparkles, Printer
+  GraduationCap, Code2, Sparkles, Printer, Globe
 } from 'lucide-react'
 
 // 个人信息 - 请修改为你的真实信息
@@ -13,6 +13,7 @@ const INFO = {
   email: 'shenqingyi16@gmail.com',
   location: '重庆',
   github: 'github.com/qingyi232',
+  website: 'qingyun-orpin.vercel.app',
   age: '23岁',
   education: '本科',
   school: '西安工商学院',
@@ -66,6 +67,10 @@ export default function ResumePage() {
                     <span className="flex items-center gap-1">
                       <Github className="w-4 h-4" />
                       {INFO.github}
+                    </span>
+                    <span className="flex items-center gap-1">
+                      <Globe className="w-4 h-4" />
+                      {INFO.website}
                     </span>
                   </div>
                 </div>
