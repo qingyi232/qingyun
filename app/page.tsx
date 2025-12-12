@@ -434,15 +434,15 @@ export default function Portfolio() {
                 </a>
               </div>
 
-              {/* 下载简历 */}
+              {/* 查看简历 */}
               <div className="mt-8 pt-6 border-t border-moss-100">
-                <a 
-                  href="/resume.pdf"
+                <Link 
+                  href="/resume"
                   className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-moss-500 to-leaf-500 text-white rounded-xl shadow-soft light-hover font-medium"
                 >
                   <Download className="w-4 h-4" />
                   下载简历 PDF
-                </a>
+                </Link>
               </div>
             </motion.div>
           </motion.div>
