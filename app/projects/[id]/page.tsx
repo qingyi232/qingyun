@@ -143,7 +143,7 @@ export async function POST(request: Request) {
       },
     ],
     githubUrl: '', // 如果有公开仓库就填
-    liveUrl: '', // 如果已上线就填
+    liveUrl: 'https://sonix.quizmate.top/', // 在线演示
   },
   'smart-park': {
     title: '智慧冰雪园区管理系统',

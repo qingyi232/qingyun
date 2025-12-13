@@ -146,6 +146,7 @@ export default function ResumePage() {
                   <span className="px-2 py-0.5 bg-moss-500 text-white text-xs rounded">重点项目</span>
                   <h3 className="font-bold text-moss-800">SONIX AI音乐生成平台</h3>
                   <span className="text-xs text-moss-500">商业级SaaS</span>
+                  <a href="https://sonix.quizmate.top/" target="_blank" rel="noopener noreferrer" className="text-xs text-moss-500 hover:text-moss-700 underline print:no-underline">在线演示 ↗</a>
                 </div>
                 <p className="text-sm text-moss-600 mb-2">
                   独立开发的AI音乐生成商业平台，用户可通过文字描述生成专业品质的原创音乐，支持多种音乐风格和付费订阅模式。
